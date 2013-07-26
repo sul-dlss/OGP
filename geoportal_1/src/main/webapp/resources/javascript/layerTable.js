@@ -652,19 +652,24 @@ org.OpenGeoPortal.LayerTable = function(userDiv, tableName){
     		  return;
     	  }
     	  var doc = solrResponse["docs"][0];  // get the first layer object
-    	  var metadataRawText = doc["FgdcText"];
     	  var layerId = doc["LayerId"];//[0];
+
+    	  // XXX: Need to load this and put the rest in a success callback
+    	  var location = jQuery.parseJSON(doc["Location"]);
+    	  var metadataURL = location["metadata"];
+    	  var metadataRawText = "<MD_Metadata/>"; //metadataURL; 
     	  var metadataDocument = jQuery.parseXML(metadataRawText);
     	  
     	  var xsl = null;
     	  var xslUrl = null;
-
-    	  if (metadataDocument.firstChild.localName == "MD_Metadata"){
-        	  xslUrl = "isoBasic.xsl";
+          var metadataType = null;
+    	  if (metadataDocument.firstChild.localName == "MD_Metadata"){  
+    	      metadataType = "iso19139";
     	  } else {
-        	  xslUrl = "FGDC_V2_a.xsl";
+        	  metadataType = "fgdc";
     	  }
-    	  xslUrl = "resources/xml/" + xslUrl;
+		  var institution = org.OpenGeoPortal.InstitutionInfo.getHomeInstitution();
+    	  xslUrl = "resources/xml/" + org.OpenGeoPortal.InstitutionInfo.getMetadataPage(institution)[metadataType];
     	  var params = {
     			  url: xslUrl,
     			  async: false,
