@@ -652,9 +652,10 @@ org.OpenGeoPortal.LayerTable = function(userDiv, tableName){
     		  return;
     	  }
     	  var doc = solrResponse["docs"][0];  // get the first layer object
-    	  var metadataRawText = doc["FgdcText"];
+    	  var metadataRawText = doc["FgdcText"].trim(); // must trim this since parseXML is fussy
     	  var layerId = doc["LayerId"];//[0];
     	  var metadataDocument = jQuery.parseXML(metadataRawText);
+
     	  
     	  var xsl = null;
     	  var xslUrl = null;
