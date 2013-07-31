@@ -655,12 +655,12 @@ org.OpenGeoPortal.LayerTable = function(userDiv, tableName){
     	  var metadataRawText = doc["FgdcText"].trim(); // must trim this since parseXML is fussy
     	  var layerId = doc["LayerId"];//[0];
     	  var metadataDocument = jQuery.parseXML(metadataRawText);
-
+    	  
     	  
     	  var xsl = null;
     	  var xslUrl = null;
 
-    	  if (metadataDocument.firstChild.localName == "MD_Metadata"){
+    	  if (metadataDocument.firstChild.localName == "MD_Metadata"){  
         	  xslUrl = "isoBasic.xsl";
     	  } else {
         	  xslUrl = "FGDC_V2_a.xsl";

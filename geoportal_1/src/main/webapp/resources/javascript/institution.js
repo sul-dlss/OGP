@@ -84,6 +84,11 @@ org.OpenGeoPortal.InstitutionInfo.getAuthenticationPage = function(institution){
 	return info[institution]["login"]["authenticationPage"];
 };
 
+org.OpenGeoPortal.InstitutionInfo.getMetadataPage = function(institution){
+	var info = org.OpenGeoPortal.InstitutionInfo.getInstitutionInfo();
+	return info[institution]["views"]["metadata"];
+};
+
 org.OpenGeoPortal.InstitutionInfo.getSearch = function(){	
 	var search = org.OpenGeoPortal.InstitutionInfo.Search;
 	//return Search if it is not empty
