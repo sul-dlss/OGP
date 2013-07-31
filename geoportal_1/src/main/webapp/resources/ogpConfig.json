@@ -7,7 +7,7 @@
         "googleAPIKey": "",
         "search": {
             "serviceType": "solr",
-            "serviceAddress": "http://localhost:8080/solr/select"
+            "serviceAddress": "http://ogpapp-dev.stanford.edu/solr/select"
         },
         "institutions": {
             "Stanford": {
