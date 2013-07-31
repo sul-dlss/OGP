@@ -15,13 +15,6 @@
                     "loginType": "iframe",
                     "authenticationPage": "https://weblogin.stanford.edu"
                 },
-                "proxy": {
-                    "id": "proxy.Restricted.Stanford",
-                    "accessLevel": ["restricted"],
-                    "wms": "restricted/wms",
-                    "wfs": "restricted/wfs",
-                    "wcs": "restricted/wcs"
-                },
                 "views": {
                     "metadata": {
                         "iso19139" : {
@@ -31,7 +24,7 @@
                             "xslUrl": "FGDC_V2_a.xsl"                            
                         }
                     }
-                }
+                },
                 "graphics": {
                     "sourceIcon": {
                         "resourceLocation": "resources/media/src_stanford.png",
