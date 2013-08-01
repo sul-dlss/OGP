@@ -8,6 +8,7 @@ body {
 /*main logo.  The width will probably have to be changed to accomodate your specific logo */
 #logo {
 	width: 420px;
+	height: 75px;
 	background-image: url(../media/logo-stanford.png);
 }
 
@@ -69,7 +70,7 @@ h2 {
  }
  
 #header {
-  	background-color: #edf4fa;
+  background-color: #edf4fa;
 	border-right: #333 solid 1px;
 	border-left: #333 solid 1px;
 	border-bottom: #999999 solid 1px;
@@ -92,9 +93,10 @@ h2 {
 	color:#333333;
 }
 
+/* footer */      
 #footer {
 	height: 30px;
-	background: #003366;
+	background:  #003366 transparent url(../media/footer-bg-stanford.jpg);
 	border-right: #333 solid 1px;
 	border-left: #333 solid 1px;
 	border-bottom: #333 solid 1px;
