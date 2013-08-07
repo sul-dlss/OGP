@@ -16,6 +16,6 @@
     	<%@include file="mailto.jspf"%> 
 	</p>
 	<p>
-	<%@include file="version.jspf"%> 
+    	<%@include file="version.jspf"%> 
 	</p>
 </div>

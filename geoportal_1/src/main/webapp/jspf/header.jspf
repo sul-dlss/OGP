@@ -1,13 +1,18 @@
 <div id="header"> 
-	<div id="logo" onclick="location.href=location.href">
- 	</div>
- 	<div id="top_menu"> 
- 		<a href="">Reset</a> &nbsp;&nbsp;&nbsp;
- 		<span id="userGuideLink" class="infoLinks">User Guide</span> 
-		 &nbsp;&nbsp;&nbsp;
- 		<span id="highlightsLink" class="infoLinks">Highlights</span> 
-		 &nbsp;&nbsp;&nbsp;
- 		<span id="headerLogin" class="infoLinks login">Login</span>
-   		<div id="welcome">Welcome!</div>
-   	</div>
+<div id="logo" onclick="location.href=location.href">
+</div>
+<div id="top_menu"> 
+<span id="aboutLink" class="infoLinks">About</span>
+&nbsp; | &nbsp;
+<span id="blogLink" class="infoLinks"><a href="http://library.stanford.edu/branner">Blog</a></span> 
+&nbsp; | &nbsp;
+<span id="contactLink" class="infoLinks">Contact</span> 
+&nbsp; | &nbsp;
+<a href="">Reset</a>
+&nbsp; | &nbsp;
+<span id="userGuideLink" class="infoLinks">Help</span> 
+&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;
+<div id="welcome">Welcome!</div>
+</div>
 </div> 

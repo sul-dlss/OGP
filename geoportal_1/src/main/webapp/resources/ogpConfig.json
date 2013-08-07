@@ -9,6 +9,10 @@
             "serviceType": "solr",
             "serviceAddress": "http://ogpapp-dev.stanford.edu/solr/select"
         },
+        "metadataXslUrl": {
+          "fgdc": "resources/xml/FGDC_V2_a.xsl",
+          "iso19139": "resources/xml/isoBasic.xsl"
+        },
         "institutions": {
             "Stanford": {
                 "login": {

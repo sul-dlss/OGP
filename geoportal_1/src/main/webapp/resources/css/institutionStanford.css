@@ -46,12 +46,12 @@ body {
 /*logos in the footer and in contact dialog */
 .itLogo {
 	width: 34px;
-	background: url(../media/uit_logo.png) no-repeat transparent;
+	background-color: #ccbda5;
 	}
 
 .gisLogo {
 	width: 111px;
-	background: url(../media/gis_logo.png) no-repeat transparent;
+	background: url(../media/footer-logo-stanford.png) no-repeat transparent;
 	}
 
 h1 {
@@ -70,15 +70,16 @@ h2 {
  }
  
 #header {
-  background-color: #edf4fa;
+  background-color: #ccbda5;
 	border-right: #333 solid 1px;
 	border-left: #333 solid 1px;
 	border-bottom: #999999 solid 1px;
 }
 
 #top_menu {
+  text-align: left;
  	width: 252px;
- 	background: url(../media/top_menu_bg.png) no-repeat transparent;
+ 	background: url(../media/top_menu_bg_stanford.png) no-repeat transparent;
  }
  
  #top_menu a {
@@ -96,19 +97,19 @@ h2 {
 /* footer */      
 #footer {
 	height: 30px;
-	background:  #003366 transparent url(../media/footer-bg-stanford.jpg);
+	background-color: #ccbda5;
 	border-right: #333 solid 1px;
 	border-left: #333 solid 1px;
 	border-bottom: #333 solid 1px;
 }
 
 #footer a{
-	color:#FFFFFF;
+	color:#000000;
 	text-decoration:none;
 }
 
 #footer a:hover{
-	color:#FFFF66;
+	color:#666666;
 }
 
 .highlight_row {

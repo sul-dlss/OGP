@@ -3,15 +3,8 @@
 		<%@include file="mailto.jspf"%> 
 	</p>
 
-	<div>
-		<h3>Project Management:</h3>
-		Patrick Florance, Manager of Geospatial Technology Services, UIT, Tufts University
-	</div>
-
-	<div id="contactLogos"> 
-		<div class="gisLogo" title="GIS@Tufts" onclick="location.href='http://gis.tufts.edu/'">
-		</div>
-		<div class="itLogo" title="UIT" onclick="location.href='http://uit.tufts.edu/'">
-		</div>
+	<div><b>
+		<h3>PROJECT MANAGEMENT AT TUTFS:</h3>
+		PATRICK FLORANCE, MANAGER OF GEOSPATIAL TECHNOLOGY SERVICES, UIT, TUFTS UNIVERSITY</b>
 	</div>
 </div>

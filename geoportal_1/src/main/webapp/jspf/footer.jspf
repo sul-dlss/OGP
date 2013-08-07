@@ -1,13 +1,8 @@
 <div id="footer">
 	<span id="footerInfo">
-		<span id="aboutLink" class="infoLinks">About</span> 
-		|  
-		<span id="contactLink" class="infoLinks">Contact</span> 
 	</span>
 	<div id="footerLogos"> 
-		<div class="itLogo" title="UIT" onclick="location.href='http://uit.tufts.edu/'">
-	    </div>
-	    <div class="gisLogo" title="GIS@Tufts" onclick="location.href='http://gis.tufts.edu/'">
+	    <div class="gisLogo" title="GIS@Stanford" onclick="location.href='http://library.stanford.edu/libraries/branner/about'">
 	    </div>
 	</div> 
 </div>
