@@ -44,13 +44,8 @@ body {
 }
 
 /*logos in the footer and in contact dialog */
-.itLogo {
-	width: 34px;
-	background-color: #ccbda5;
-	}
-
 .gisLogo {
-	width: 111px;
+	width: 61px;
 	background: url(../media/footer-logo-stanford.png) no-repeat transparent;
 	}
 
