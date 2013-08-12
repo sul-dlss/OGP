@@ -7,7 +7,7 @@
         "googleAPIKey": "",
         "search": {
             "serviceType": "solr",
-            "serviceAddress": "http://ogpapp-dev.stanford.edu/solr/select"
+            "serviceAddress": "http://sul-solr.stanford.edu/solr/ogp-dev/select"
         },
         "metadataXslUrl": {
           "fgdc": "resources/xml/FGDC_V2_a.xsl",
