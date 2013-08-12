@@ -77,7 +77,7 @@ h2 {
 }
 
 #top_menu {
-  text-align: left;
+/*  text-align: left;*/
  	width: 252px;
  	background: url(../media/top_menu_bg_stanford.png) no-repeat transparent;
  }

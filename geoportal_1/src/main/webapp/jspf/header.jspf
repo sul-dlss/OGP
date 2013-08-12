@@ -3,13 +3,13 @@
 </div>
 <div id="top_menu"> 
 <span id="aboutLink" class="infoLinks">About</span>
-&nbsp; | &nbsp;
+&nbsp;&nbsp;&nbsp;
 <span id="blogLink" class="infoLinks"><a href="http://library.stanford.edu/branner">Blog</a></span> 
-&nbsp; | &nbsp;
+&nbsp;&nbsp;&nbsp;
 <span id="contactLink" class="infoLinks">Contact</span> 
-&nbsp; | &nbsp;
+&nbsp;&nbsp;&nbsp;
 <a href="">Reset</a>
-&nbsp; | &nbsp;
+&nbsp;&nbsp;&nbsp;
 <span id="userGuideLink" class="infoLinks">Help</span> 
 &nbsp;&nbsp;&nbsp;
 &nbsp;&nbsp;&nbsp;
