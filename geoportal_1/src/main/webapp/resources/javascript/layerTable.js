@@ -1195,6 +1195,9 @@ org.OpenGeoPortal.LayerTable = function(userDiv, tableName){
 			  var homeInstitution = org.OpenGeoPortal.InstitutionInfo.getHomeInstitution();
 			  var layerSource = rowObj.aData[this.tableHeadingsObj.getColumnIndex("Institution")];
 			  if (layerSource == homeInstitution){
+                  if (layerSource == 'Stanford') { //XXX: hack to remove login control for preview
+			          return this.getActivePreviewControl(rowObj);			  
+                  }
 				  if (org.OpenGeoPortal.ui.login.isLoggedIn()){
 					  return this.getActivePreviewControl(rowObj);
 				  } else {
