@@ -7,7 +7,7 @@
         "googleAPIKey": "",
         "search": {
             "serviceType": "solr",
-            "serviceAddress": "http://sul-solr.stanford.edu/solr/ogp-dev/select"
+            "serviceAddress": "http://ogpapp-test.stanford.edu/solr/ogp-test/select"
         },
         "metadataXslUrl": {
           "fgdc": "resources/xml/FGDC_V2_a.xsl",
@@ -16,18 +16,8 @@
         "institutions": {
             "Stanford": {
                 "login": {
-                    "loginType": "iframe",
-                    "authenticationPage": "https://weblogin.stanford.edu"
-                },
-                "views": {
-                    "metadata": {
-                        "iso19139" : {
-                            "xslUrl": "iso2html/xml-to-html-ISO.xsl"                            
-                        },
-                        "fgdc" : {
-                            "xslUrl": "FGDC_V2_a.xsl"                            
-                        }
-                    }
+                    "loginType": "form",
+                    "authenticationPage": "login"
                 },
                 "graphics": {
                     "sourceIcon": {
