@@ -2313,11 +2313,11 @@ org.OpenGeoPortal.LayerTable.TableHeadings = function(thisObj){
 		     "LayerDisplayName": {"ajax": true, "resizable": true, "minWidth": 28, "currentWidth": 215, "organize": "alpha", "displayName": "Name", "columnConfig": 
 		            	{"sName": "LayerDisplayName", "sTitle": "Name", "bVisible": true, "aTargets": [ 7 ], "sClass": "colTitle", "bSortable": false}}, 
 		     "Originator": {"ajax": true, "resizable": true, "minWidth": 47, "currentWidth": 81, "organize": "group", "displayName": "Originator", "columnConfig": 
-		            	{"sName": "Originator", "sTitle": "Originator", "bVisible": true, "aTargets": [ 8 ], "sClass": "colOriginator", "bSortable": false}},            	
+		            	{"sName": "Originator", "sTitle": "Originator", "bVisible": false, "aTargets": [ 8 ], "sClass": "colOriginator", "bSortable": false}},            	
 		     "Publisher": {"ajax": true, "resizable": true, "minWidth": 47, "currentWidth": 80, "organize": "group", "displayName": "Publisher", "columnConfig": 
 		            	{"sName": "Publisher", "sTitle": "Publisher", "bVisible": false, "aTargets": [ 9 ], "sClass": "colPublisher", "bSortable": false}},
 		     "ContentDate": {"ajax": true, "resizable": false, "organize": "numeric", "displayName": "Date", "columnConfig": 
-		            	{"sName": "ContentDate", "sTitle": "Date", "bVisible": false, "aTargets": [ 10 ], "sClass": "colDate", "sWidth": "25px", "bSortable": false, "bUseRendered": true,
+		            	{"sName": "ContentDate", "sTitle": "Date", "bVisible": true, "aTargets": [ 10 ], "sClass": "colDate", "sWidth": "25px", "bSortable": false, "bUseRendered": true,
 		            		"fnRender": function(oObj){return oObj.aData[oObj.iDataColumn].substr(0, 4);}}},
 		     "Institution": {"ajax": true, "resizable": false, "organize": "alpha", "displayName": "Repository", "columnConfig": 
 		            	{"sName": "Institution", "sTitle": "Rep", "bVisible": true, "aTargets": [ 11 ], "sClass": "colSource", "sWidth": "19px", "bSortable": false, "bUseRendered": false, 
@@ -2326,7 +2326,7 @@ org.OpenGeoPortal.LayerTable.TableHeadings = function(thisObj){
 		                {"sName": "Metadata", "sTitle": "<img src=\"resources/media/icon_meta.png\" alt=\"Metadata\" title=\"show metadata\" />", "bVisible": true, "aTargets": [ 12 ], "sClass": "colMetadata", "sWidth": "17px", "bSortable": false, "bUseRendered": false, 
 		                 	"fnRender": function(oObj){return thisObj.getMetadataIcon(oObj);}}},       		
 		     "Access": {"ajax": true, "resizable": false, "organize": "alpha", "displayName": "Access", "columnConfig": 
-		                 {"sName": "Access", "sTitle": "Access", "bVisible": false, "aTargets": [ 13 ], "sClass": "colAccess", "sWidth": "53px", "bSortable": false}},
+		                 {"sName": "Access", "sTitle": "Access", "bVisible": true, "aTargets": [ 13 ], "sClass": "colAccess", "sWidth": "53px", "bSortable": false}},
 		     "View": {"ajax": false, "resizable": false, "organize": false, "columnConfig": 
 		            	{"sName": "View", "sTitle": "Preview", "bVisible": true, "aTargets": [ 14 ], "sClass": "colPreview", "sWidth": "39px", "bSortable": false,
 		            			"fnRender": function(oObj){return thisObj.getPreviewControl(oObj);}}},

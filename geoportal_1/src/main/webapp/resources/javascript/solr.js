@@ -185,6 +185,7 @@ org.OpenGeoPortal.Solr.prototype.LayerAreaIntersection = {term: "LayerAreaInters
 /*defaults */
 org.OpenGeoPortal.Solr.prototype.BasicKeywordString = null;
 
+org.OpenGeoPortal.Solr.prototype.InstitutionTerm = {term: "Institution", hasBoost: true, boost: "4.0", hasCap: false};
 org.OpenGeoPortal.Solr.prototype.LayerDisplayNameTerm = {term: "LayerDisplayNameSynonyms", baseTerm:"LayerDisplayName", hasBoost: true, boost: "5.0", hasCap: true, cap: "0.5"};
 org.OpenGeoPortal.Solr.prototype.ThemeKeywordsTerm = {term: "ThemeKeywordsSynonymsLcsh", baseTerm: "ThemeKeywords", hasBoost: true, boost: "1.0", hasCap: true, cap: "0.5"};
 org.OpenGeoPortal.Solr.prototype.PlaceKeywordsTerm = {term: "PlaceKeywordsSynonyms", baseTerm: "PlaceKeywords", hasBoost: true, boost: "2.0", hasCap: false};
@@ -196,6 +197,7 @@ org.OpenGeoPortal.Solr.prototype.GenericPhraseBoost = "9.0";
 
 
 org.OpenGeoPortal.Solr.prototype.BasicKeywordTerms = [org.OpenGeoPortal.Solr.prototype.LayerDisplayNameTerm,
+                                                      org.OpenGeoPortal.Solr.prototype.InstitutionTerm,
                                                       org.OpenGeoPortal.Solr.prototype.ThemeKeywordsTerm,
                                                       org.OpenGeoPortal.Solr.prototype.PlaceKeywordsTerm,
                                                       org.OpenGeoPortal.Solr.prototype.PublisherTerm,
