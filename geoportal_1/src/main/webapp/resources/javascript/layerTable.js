@@ -652,24 +652,26 @@ org.OpenGeoPortal.LayerTable = function(userDiv, tableName){
     		  return;
     	  }
     	  var doc = solrResponse["docs"][0];  // get the first layer object
-    	  var metadataRawXML = doc["FgdcText"].trim(); // must trim this since parseXML is fussy
+    	  var metadataRawText = doc["FgdcText"];
     	  var layerId = doc["LayerId"];//[0];
-    	  var metadataDocument = jQuery.parseXML(metadataRawXML);
+    	  var metadataDocument = jQuery.parseXML(metadataRawText);
     	  
-    	  var xslUrl = null;
-    	  if (metadataDocument.firstChild.localName == "MD_Metadata"){  
-        	  xslUrl = org.OpenGeoPortal.InstitutionInfo.getMetadataXslUrl()["iso19139"];
-    	  } else {
-        	  xslUrl = org.OpenGeoPortal.InstitutionInfo.getMetadataXslUrl()["fgdc"];
-    	  }
-
     	  var xsl = null;
-    	  jQuery.ajax({
-      			  url: xslUrl,
-      			  async: false,
-      			  dataType: 'xml',
-      			  success: function(data){xsl = data;}
-      	  });
+    	  var xslUrl = null;
+
+    	  if (metadataDocument.firstChild.localName == "MD_Metadata"){
+        	  xslUrl = "isoBasic.xsl";
+    	  } else {
+        	  xslUrl = "FGDC_V2_a.xsl";
+    	  }
+    	  xslUrl = "resources/xml/" + xslUrl;
+    	  var params = {
+    			  url: xslUrl,
+    			  async: false,
+    			  dataType: 'xml',
+    			  success: function(data){xsl = data;}
+    	  };
+    	  jQuery.ajax(params);
     	  var resultDocument = "";
     	  if (xsl != null){
     		  if (jQuery.browser.msie){
@@ -756,7 +758,13 @@ org.OpenGeoPortal.LayerTable = function(userDiv, tableName){
           var layerId = aData[this.tableHeadingsObj.getColumnIndex("LayerId")];
           var solr = new org.OpenGeoPortal.Solr();
       	  var query = solr.getMetadataQuery(layerId);
-      	  solr.sendToSolr(query, this.showMetadataJsonpSuccess, this.showMetadataJsonpError, this);
+      	  // XXX: Support for 'view' in location
+          var location = jQuery.parseJSON(aData[this.tableHeadingsObj.getColumnIndex("Location")]);
+          if (typeof location != 'undefined' && typeof location['view'] != 'undefined') {
+              window.open(location['view'], 'ogpView');
+          } else {
+              solr.sendToSolr(query, this.showMetadataJsonpSuccess, this.showMetadataJsonpError, this);
+          }
 			analytics.track("Metadata", "Display Metdata", layerId);
 	  };	
 	  
@@ -1194,10 +1202,11 @@ org.OpenGeoPortal.LayerTable = function(userDiv, tableName){
 		  } else {
 			  var homeInstitution = org.OpenGeoPortal.InstitutionInfo.getHomeInstitution();
 			  var layerSource = rowObj.aData[this.tableHeadingsObj.getColumnIndex("Institution")];
+		    // XXX: hack to remove login control for preview -- assumes network/transport-layer authentication
+			  if (layerSource == 'Stanford') { 
+          return this.getActivePreviewControl(rowObj);			  
+        }
 			  if (layerSource == homeInstitution){
-                  if (layerSource == 'Stanford') { //XXX: hack to remove login control for preview
-			          return this.getActivePreviewControl(rowObj);			  
-                  }
 				  if (org.OpenGeoPortal.ui.login.isLoggedIn()){
 					  return this.getActivePreviewControl(rowObj);
 				  } else {

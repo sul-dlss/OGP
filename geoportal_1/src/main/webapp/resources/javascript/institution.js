@@ -28,7 +28,6 @@ org.OpenGeoPortal.InstitutionInfo.homeInstitution = "";
 org.OpenGeoPortal.InstitutionInfo.institutionSpecificCss = "";
 org.OpenGeoPortal.InstitutionInfo.institutionSpecificJavaScript = "";
 org.OpenGeoPortal.InstitutionInfo.institutionSpecificGoogleAnalyticsId = "";
-org.OpenGeoPortal.InstitutionInfo.metadataXslUrl = {};
 
 org.OpenGeoPortal.InstitutionInfo.getHomeInstitution = function(){	
 	var institution = org.OpenGeoPortal.InstitutionInfo.homeInstitution;
@@ -63,10 +62,6 @@ org.OpenGeoPortal.InstitutionInfo.getGoogleAnalyticsId = function(){
 	return googleAnalyticsId;
 };
 
-org.OpenGeoPortal.InstitutionInfo.getMetadataXslUrl = function(){	
-	return org.OpenGeoPortal.InstitutionInfo.metadataXslUrl;
-};
-
 org.OpenGeoPortal.InstitutionInfo.getWMSProxy = function(institution, accessLevel) {
 	var configObj = org.OpenGeoPortal.InstitutionInfo.Config[institution];
 	if (typeof configObj.proxy != "undefined"){
@@ -87,11 +82,6 @@ org.OpenGeoPortal.InstitutionInfo.getLoginType = function(institution){
 org.OpenGeoPortal.InstitutionInfo.getAuthenticationPage = function(institution){
 	var info = org.OpenGeoPortal.InstitutionInfo.getInstitutionInfo();
 	return info[institution]["login"]["authenticationPage"];
-};
-
-org.OpenGeoPortal.InstitutionInfo.getMetadataPage = function(institution){
-	var info = org.OpenGeoPortal.InstitutionInfo.getInstitutionInfo();
-	return info[institution]["views"]["metadata"];
 };
 
 org.OpenGeoPortal.InstitutionInfo.getSearch = function(){	
