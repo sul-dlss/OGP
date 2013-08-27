@@ -758,10 +758,11 @@ org.OpenGeoPortal.LayerTable = function(userDiv, tableName){
           var layerId = aData[this.tableHeadingsObj.getColumnIndex("LayerId")];
           var solr = new org.OpenGeoPortal.Solr();
       	  var query = solr.getMetadataQuery(layerId);
-      	  // XXX: Support for 'view' in location
+      	  // XXX: Support for 'purl' in location rather than fgdc
           var location = jQuery.parseJSON(aData[this.tableHeadingsObj.getColumnIndex("Location")]);
-          if (typeof location != 'undefined' && typeof location['view'] != 'undefined') {
-              window.open(location['view'], 'ogpView');
+          if (typeof location != 'undefined' && typeof location['purl'] != 'undefined') {
+              w = window.open(location['purl'], '_blank', 'width=800, height=600');
+              w.focus()
           } else {
               solr.sendToSolr(query, this.showMetadataJsonpSuccess, this.showMetadataJsonpError, this);
           }
@@ -2326,7 +2327,7 @@ org.OpenGeoPortal.LayerTable.TableHeadings = function(thisObj){
 		     "Publisher": {"ajax": true, "resizable": true, "minWidth": 47, "currentWidth": 80, "organize": "group", "displayName": "Publisher", "columnConfig": 
 		            	{"sName": "Publisher", "sTitle": "Publisher", "bVisible": false, "aTargets": [ 9 ], "sClass": "colPublisher", "bSortable": false}},
 		     "ContentDate": {"ajax": true, "resizable": false, "organize": "numeric", "displayName": "Date", "columnConfig": 
-		            	{"sName": "ContentDate", "sTitle": "Date", "bVisible": true, "aTargets": [ 10 ], "sClass": "colDate", "sWidth": "25px", "bSortable": false, "bUseRendered": true,
+		            	{"sName": "ContentDate", "sTitle": "Date", "bVisible": false, "aTargets": [ 10 ], "sClass": "colDate", "sWidth": "25px", "bSortable": false, "bUseRendered": true,
 		            		"fnRender": function(oObj){return oObj.aData[oObj.iDataColumn].substr(0, 4);}}},
 		     "Institution": {"ajax": true, "resizable": false, "organize": "alpha", "displayName": "Repository", "columnConfig": 
 		            	{"sName": "Institution", "sTitle": "Rep", "bVisible": true, "aTargets": [ 11 ], "sClass": "colSource", "sWidth": "19px", "bSortable": false, "bUseRendered": false, 

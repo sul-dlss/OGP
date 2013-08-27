@@ -7,7 +7,7 @@
         "googleAPIKey": "",
         "search": {
             "serviceType": "solr",
-            "serviceAddress": "http://ogpapp-test.stanford.edu/solr/ogp/select"
+            "serviceAddress": "http://geoportal.stanford.edu/solr/ogp/select"
         },
         "metadataXslUrl": {
           "fgdc": "resources/xml/FGDC_V2_a.xsl",
@@ -17,7 +17,7 @@
             "Stanford": {
                 "login": {
                     "loginType": "form",
-                    "authenticationPage": "login"
+                    "authenticationPage": "not_used"
                 },
                 "graphics": {
                     "sourceIcon": {
