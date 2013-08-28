@@ -1791,6 +1791,10 @@ org.OpenGeoPortal.LayerTable = function(userDiv, tableName){
     	for (var institution in institutionConfig){
 			solr.addInstitution(institution);
     	}
+    	// XXX: Hack to filter all "stanford" searches with an Institution filter
+    	if (keywords.toLowerCase.search('stanford') != -1) {
+    	  solr.setInstitutions(['Stanford']);
+    	}
     	
 	};
 	//*******Search Results only

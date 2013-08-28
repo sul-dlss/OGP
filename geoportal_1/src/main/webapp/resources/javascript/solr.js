@@ -197,7 +197,6 @@ org.OpenGeoPortal.Solr.prototype.GenericPhraseBoost = "9.0";
 
 
 org.OpenGeoPortal.Solr.prototype.BasicKeywordTerms = [org.OpenGeoPortal.Solr.prototype.LayerDisplayNameTerm,
-                                                      org.OpenGeoPortal.Solr.prototype.InstitutionTerm,
                                                       org.OpenGeoPortal.Solr.prototype.ThemeKeywordsTerm,
                                                       org.OpenGeoPortal.Solr.prototype.PlaceKeywordsTerm,
                                                       org.OpenGeoPortal.Solr.prototype.PublisherTerm,
