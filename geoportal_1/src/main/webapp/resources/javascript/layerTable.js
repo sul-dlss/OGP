@@ -1795,7 +1795,7 @@ org.OpenGeoPortal.LayerTable = function(userDiv, tableName){
     	if ((keywords != null) && (keywords.toLowerCase().search('stanford') != -1)) {
     	  solr.setInstitutions(['Stanford']);
     	  if (keywords.toLowerCase() == 'stanford') {
-    	      solr.setBasicKeywords('*');
+    	      solr.setBasicKeywords(null);
     	  }
     	}
     	
