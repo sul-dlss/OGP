@@ -655,7 +655,10 @@ org.OpenGeoPortal.LayerTable = function(userDiv, tableName){
     	  var metadataRawText = doc["FgdcText"];
     	  var layerId = doc["LayerId"];//[0];
     	  var metadataDocument = jQuery.parseXML(metadataRawText);
-    	  
+    	  if (metadataDocument == null) {
+    		  throw new Error("Invalid XML for this metadata");
+    		  return;
+    	  }
     	  var xsl = null;
     	  var xslUrl = null;
 
