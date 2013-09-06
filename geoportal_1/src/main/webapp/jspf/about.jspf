@@ -1,4 +1,7 @@
 <div id="about" class="dialog infoDialog">
+   	<p>
+    <em>GeoData@Stanford</em> is the main repository for geospatial data and metadata at the Stanford Geospatial Center. It combines data held at Stanford with metadata from our partner institutions. Stanford data are available only to current affiliates of the university.
+   	</p>
 	<p>
 	OpenGeoPortal is developed and maintained by Tufts University Information Technology. 
 	Tufts is leading the development in collaboration with Harvard of this open source, federated web application to rapidly discover, preview, 

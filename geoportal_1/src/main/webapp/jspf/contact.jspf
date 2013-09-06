@@ -2,9 +2,4 @@
 	<p>
 		<%@include file="mailto.jspf"%> 
 	</p>
-
-	<div><b>
-		<h3>PROJECT MANAGEMENT AT TUTFS:</h3>
-		PATRICK FLORANCE, MANAGER OF GEOSPATIAL TECHNOLOGY SERVICES, UIT, TUFTS UNIVERSITY</b>
-	</div>
 </div>
