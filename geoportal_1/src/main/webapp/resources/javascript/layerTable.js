@@ -367,7 +367,7 @@ org.OpenGeoPortal.LayerTable = function(userDiv, tableName){
 		    //sOut += '<input type="checkbox" class="outlineControl" title="Add an outline to polygon layer" id="outlineCheckBox' + tableID + layerID;
 		    //sOut += '" onclick="org.OpenGeoPortal.ui.toggleOutline(this, \'' + layerID + '\', \'' + dataType + '\')"/><label for="outlineCheckBox' + tableID + layerID + '" title="Add an outline to polygon layer">outline</label>';
 	    	sOut += '</div>';
-            // sOut += '<div class="colorControlCell"><div class="colorPalette button" title="Change the layer color" id="colorPalette' + tableID + escapedLayerID + '" onclick="org.OpenGeoPortal.ui.colorDialog(\'' + layerID + '\', \'' + dataType + '\')"></div></div>';
+            sOut += '<div class="colorControlCell"><div class="colorPalette button" title="Change the layer color" id="colorPalette' + tableID + escapedLayerID + '" onclick="org.OpenGeoPortal.ui.colorDialog(\'' + layerID + '\', \'' + dataType + '\')"></div></div>';
 	    	sOut += '<div class="zoomToLayerControlCell"><img src="' + this.getImage("zoomextent.gif") + '" class="button zoomToLayerControl" alt="Zoom to geographic extent of layer" title="Zoom to geographic extent of layer" onclick="org.OpenGeoPortal.map.zoomToLayerExtent(\'' + extent.join() + '\')" /></div>';
 	    	sOut += '<div class="attributeInfoControlCell">';
 	    	sOut +=	'<img src="' + attributeToolImg + '" id="attributeInfoControl' + tableID + escapedLayerID + '"class="button attributeInfoControl" alt="Show Attributes" title="Click a previewed feature on the map to view its attributes" onclick="org.OpenGeoPortal.ui.toggleFeatureInfo(this, \'' + layerID + '\', \'' + displayName + '\')" /></div>';
