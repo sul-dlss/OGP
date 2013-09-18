@@ -4,13 +4,13 @@
 <div id="top_menu"> 
 <span id="aboutLink" class="infoLinks">About</span>
 &nbsp;&nbsp;&nbsp;
-<span id="blogLink" class="infoLinks"><a href="http://library.stanford.edu/branner">Blog</a></span> 
+<a href="http://library.stanford.edu/branner">Blog</a>
 &nbsp;&nbsp;&nbsp;
 <span id="contactLink" class="infoLinks">Contact</span> 
 &nbsp;&nbsp;&nbsp;
 <a href="">Reset</a>
 &nbsp;&nbsp;&nbsp;
-<span id="userGuideLink" class="infoLinks">Help</span> 
+<a href="resources/media/userGuide.pdf">Help</a>
 &nbsp;&nbsp;&nbsp;
 &nbsp;&nbsp;&nbsp;
 <div id="welcome">Welcome!</div>
