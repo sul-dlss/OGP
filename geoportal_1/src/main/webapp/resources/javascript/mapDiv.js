@@ -804,8 +804,8 @@ org.OpenGeoPortal.MapController.prototype.addWMSLayer = function (mapObj) {
              format: format, 
              tiled: true,
              exceptions: "application/vnd.ogc.se_inxml",
-             transparent: true//,
-             //version: "1.1.1"
+             transparent: true,
+             version: "1.3.0"
             },
             {
              //buffer: 0,
