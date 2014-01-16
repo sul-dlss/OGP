@@ -30,7 +30,8 @@ public class WfsGetFeature {
 		//--generate POST message
 		//info needed: geometry column, bbox coords, epsg code, workspace & layername
 		
-        String layerNameNS = OgpUtils.getLayerNameNS(layerName, workSpace);
+		String layerNameNS = OgpUtils.getLayerNameNS(layerName, workSpace);
+		
 		String getFeatureRequest = "<wfs:GetFeature service=\"WFS\" version=\"1.0.0\""
 			+ " outputFormat=\"" + outputFormat + "\""
 			+ getAttributeString("maxfeatures", maxFeatures)
