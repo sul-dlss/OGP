@@ -33,7 +33,11 @@ org.OpenGeoPortal.LogIn = function(institution){
 	//this.responseObject = null;
 	// userId is null if no user is logged in
 	// when non-null, it is the id of the logged in user
-	this.userId = null;
+	if (institution == "Stanford"){
+	    this.userId = "anonymousUser";
+    } else {
+	    this.userId = null;
+	}
 
 	this.isLoggedIn = function(){
 		if (this.userId == null){
@@ -131,15 +135,15 @@ org.OpenGeoPortal.LogIn = function(institution){
 };
 
 this.checkLoginStatus = function(){
-	var that = this;
-	var url = this.getUrl() + "loginStatus";
-	var ajaxArgs = {url: url, type: "GET", 
-			context: that,
-			crossDomain: true,
-			dataType: "jsonp",
-			success: that.loginStatusResponse
-			};
-	jQuery.ajax(ajaxArgs);
+    var that = this;
+    var url = this.getUrl() + "loginStatus";
+    var ajaxArgs = {url: url, type: "GET", 
+         context: that,
+         crossDomain: true,
+         dataType: "jsonp",
+         success: that.loginStatusResponse
+         };
+    jQuery.ajax(ajaxArgs);
 };
 
 this.getUrl = function(){
@@ -242,14 +246,14 @@ this.loginResponse = function(data, textStatus, jqXHR)
 
 //callback handler invoked when if an error occurs during ajax call to authenticate a user
 this.loginResponseError = function(jqXHR, textStatus, errorThrown){
-	this.userId = null;
+	this.userId = "anonymousUser"; // GIS-7: Stanford is always logged in
 	this.loginDialog({"message": "login failed"});
 	jQuery(document).trigger("loginFailed");
 };
 
 //callback handler invoked when if an error occurs during ajax call to authenticate a user
 this.loginStatusError = function(jqXHR, textStatus, errorThrown){
-	this.userId = null;
+	this.userId = "anonymousUser"; // GIS-7: Stanford is always logged in
 	jQuery(document).trigger("loginFailed");
 };
 
