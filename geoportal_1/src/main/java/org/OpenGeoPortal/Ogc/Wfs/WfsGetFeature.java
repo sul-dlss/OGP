@@ -1,6 +1,7 @@
 package org.OpenGeoPortal.Ogc.Wfs;
 
 import org.OpenGeoPortal.Download.Types.BoundingBox;
+import org.OpenGeoPortal.Utilities.OgpUtils;
 
 public class WfsGetFeature {
 	public static String createWfsGetFeatureRequest(String layerName, String workSpace, String nameSpace, String outputFormat, String filter) throws Exception {
