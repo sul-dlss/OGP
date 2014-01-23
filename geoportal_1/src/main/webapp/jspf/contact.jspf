@@ -1,4 +1,4 @@
-<div id="feedback" class="dialog infoDialog">
+<div id="contact" class="dialog infoDialog">
 	<p>
 		<%@include file="mailto.jspf"%> 
 	</p>

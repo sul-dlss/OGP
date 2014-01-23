@@ -147,7 +147,7 @@ org.OpenGeoPortal.UserInterface = function(){
 			jQuery('#about').dialog("open");
 			analytics.track("Help", "Show About");
 		});
-		jQuery('#feedback').dialog({
+		jQuery('#contact').dialog({
     		zIndex: 2999,
     		title: "FEEDBACK INFORMATION",
     		resizable: false,
@@ -155,8 +155,8 @@ org.OpenGeoPortal.UserInterface = function(){
     		minWidth: 405,
     		autoOpen: false		
 		});
-		jQuery("#feedbackLink").click(function(){
-			jQuery('#feedback').dialog("open");
+		jQuery("#contactLink").click(function(){
+			jQuery('#contact').dialog("open");
 		});
 		jQuery('#userGuide').dialog({
     		zIndex: 2999,
