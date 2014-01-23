@@ -147,16 +147,16 @@ org.OpenGeoPortal.UserInterface = function(){
 			jQuery('#about').dialog("open");
 			analytics.track("Help", "Show About");
 		});
-		jQuery('#contact').dialog({
+		jQuery('#feedback').dialog({
     		zIndex: 2999,
-    		title: "CONTACT INFORMATION",
+    		title: "FEEDBACK INFORMATION",
     		resizable: false,
     		minHeight: 222,
     		minWidth: 405,
     		autoOpen: false		
 		});
-		jQuery("#contactLink").click(function(){
-			jQuery('#contact').dialog("open");
+		jQuery("#feedbackLink").click(function(){
+			jQuery('#feedback').dialog("open");
 		});
 		jQuery('#userGuide').dialog({
     		zIndex: 2999,
