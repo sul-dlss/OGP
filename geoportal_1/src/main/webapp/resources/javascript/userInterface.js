@@ -149,7 +149,7 @@ org.OpenGeoPortal.UserInterface = function(){
 		});
 		jQuery('#contact').dialog({
     		zIndex: 2999,
-    		title: "CONTACT INFORMATION",
+    		title: "FEEDBACK INFORMATION",
     		resizable: false,
     		minHeight: 222,
     		minWidth: 405,
