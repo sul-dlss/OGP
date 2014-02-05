@@ -3,7 +3,7 @@
         "homeInstitution": "Stanford",
         "institutionSpecificCss": "resources/css/institutionStanford.css",
         "institutionSpecificJavaScript": "resources/javascript/institutionStanford.js",
-        "googleAnalyticsId": "",
+        "googleAnalyticsId": "UA-47815117-1",
         "googleAPIKey": "",
         "search": {
             "serviceType": "solr",
